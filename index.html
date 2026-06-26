@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="id" style="scroll-behavior: smooth;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Muhammad Aditya Nugraha Pratama</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #faf6f0;
+        }
+
+        .navbar {
+            background-color: rgba(214, 192, 174, 0.95) !important;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+        }
+
+        .hero {
+            padding: 140px 0 100px;
+            background: linear-gradient(135deg, #e6ccb2 0%, #b08968 100%);
+            color: white;
+            position: relative;
+        }
+
+        .hero img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 6px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 10px 25px rgba(176, 137, 104, 0.15);
+            animation: float 8s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .text-gradient {
+            background: linear-gradient(to right, #ffffff, #ffe5b4, #ffb347);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .btn-custom {
+            background-color: white;
+            color: #7f5539;
+            font-weight: 600;
+            border-radius: 30px;
+            padding: 12px 35px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .btn-custom:hover {
+            background-color: #fdfdfd;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(127, 85, 57, 0.15);
+            color: #b08968;
+        }
+
+        .portfolio-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(176, 137, 104, 0.04);
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(176, 137, 104, 0.1);
+        }
+
+        .portfolio-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-bottom: 1px solid #faf6f0;
+        }
+
+        .portfolio-content {
+            padding: 20px;
+        }
+
+        .contact-box {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(176, 137, 104, 0.04);
+        }
+
+        .form-control {
+            border-radius: 10px;
+            padding: 12px 15px;
+            border: 1px solid #eddcd2;
+            transition: all 0.3s;
+            background-color: #fdfbf9;
+        }
+
+        .form-control:focus {
+            box-shadow: 0 0 0 3px rgba(230, 204, 178, 0.4);
+            border-color: #ddb892;
+            background-color: white;
+        }
+        
+        .btn-primary {
+            background-color: #b08968 !important;
+            border-color: #b08968 !important;
+        }
+        
+        .btn-primary:hover {
+            background-color: #7f5539 !important;
+            border-color: #7f5539 !important;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#home">Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero text-center">
+        <div class="container">
+            <img src="Assets/Profil.jpeg" alt="Profile Aditya">
+            <h1 class="mt-4 fw-bold text-gradient">Muhammad Aditya Nugraha Pratama</h1>
+            <p class="lead mb-4">Mahasiswa Sistem Informasi | Universitas Pamulang</p>
+            <a href="#portfolio" class="btn btn-custom btn-lg">Lihat Konten Saya</a>
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-5">
+        <div class="container mt-4">
+            <h2 class="text-center fw-bold mb-5" style="color: #7f5539;">Konten Saya</h2>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="portfolio-card h-100">
+                        <img src="Assets/001.JPG" alt="Topeng Kayu Nusantara">
+                        <div class="portfolio-content">
+                            <h5 class="fw-bold">Topeng Kayu Nusantara</h5>
+                            <p class="text-muted text-sm">Foto ini menampilkan sebuah topeng kayu berukir yang digantung pada pilar kayu bertekstur kasar dan lapuk. Topeng tersebut memiliki detail pahatan wajah tradisional dengan sentuhan warna cat yang mulai memudar, seperti biru, cokelat, dan kekuningan, memberikan kesan artistik dan antik. Kontras antara lengkungan halus pada ukiran wajah topeng dan garis-garis kasar pada serat kayu di belakangnya menonjolkan keindahan seni kriya lokal dan nilai budaya sejarah yang kuat.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="portfolio-card h-100">
+                        <img src="Assets/004.jpg" alt="Museum Fatahillah">
+                        <div class="portfolio-content">
+                            <h5 class="fw-bold">Museum Fatahillah</h5>
+                            <p class="text-muted text-sm">Foto ini mengabadikan keindahan ikonik dari Museum Fatahillah (Museum Sejarah Jakarta) yang berdiri megah di kawasan bersejarah Kota Tua, Jakarta. Dalam foto ini, bangunan peninggalan kolonial abad ke-18 tersebut tampil anggun dengan arsitektur klasik bergaya Eropa, didominasi oleh dinding putih bersih, deretan jendela besar yang simetris, serta atap genteng merah bata yang memikat. Keberadaan menara kecil (cupola) di puncaknya menjadi ciri khas yang mempertegas kemegahan masa lalu.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="portfolio-card h-100">
+                        <img src="Assets/003.jpeg" alt="Jam Gantung Klasik">
+                        <div class="portfolio-content">
+                            <h5 class="fw-bold">Jam Gantung Klasik</h5>
+                            <p class="text-muted text-sm">Ini adalah sebuah jam gantung stasiun bergaya vintage dengan bingkai logam hitam dekoratif dan angka romawi yang klasik. Jam ini terpasang menggantung pada struktur balok kayu berwarna putih di area semi-terbuka. Latar belakang foto memperlihatkan perpaduan antara arsitektur bangunan bercat putih dengan pintu/jendela kaca kotak-kotak dan rimbunnya dedaunan hijau dari tanaman di sekitarnya. Komposisi ini menciptakan suasana yang tenang, teduh, dan sarat akan nuansa nostalgia.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-5 bg-white">
+        <div class="container mt-4 mb-5">
+            <h2 class="text-center fw-bold mb-5" style="color: #7f5539;">Hubungi Saya</h2>
+
+            <div class="mx-auto contact-box" style="max-width: 650px;">
+                <form action="#" method="POST">
+                    <div class="mb-4">
+                        <label class="form-label fw-semibold text-secondary">Nama Lengkap</label>
+                        <input type="text" class="form-control" placeholder="Masukkan nama kamu..." required>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label fw-semibold text-secondary">Email</label>
+                        <input type="email" class="form-control" placeholder="Alamat email aktif..." required>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label fw-semibold text-secondary">Pesan</label>
+                        <textarea class="form-control" rows="5" placeholder="Tulis pesan yang ingin disampaikan..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100 py-3 fw-bold" style="border-radius: 10px;">Kirim Pesan</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-4">
+        <p class="mb-0 text-muted">&copy; 2026 Portfolio. Dibuat dengan Bootstrap 5.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
